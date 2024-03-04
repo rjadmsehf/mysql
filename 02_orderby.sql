@@ -35,7 +35,8 @@ select
 	menu_price
 from tbl_menu
 order by
-	menu_price desc,
+
+	menu_price desc,  -- 첫번째 만정렬됨 
 	menu_name asc;
 	
 -- order by 절을 사용하여 연산 결과로 결과 집합 정렬 
@@ -63,15 +64,16 @@ select
   from
 	  tbl_menu
 order by 
-		menu_name;
+		menu_name; 
 
 -- order by 절을 사용하여 사용자 지정 목록을 사용하여 데이타 정렬
 
--- 맨 왼쪽 값이 2번쨰 인자 이후의 값고 일치하면 해당 위치 값을 반환 
-select field('c','a','b','c');
+-- 맨 왼쪽 값이 2번쨰 인자 이후의 값과 일치하면 해당 위치 값을 반환 
+select field('b','a','b','c');
 
 
 select
+
 	field(orderable_status, 'N' , 'Y')    
 from tbl_menu;
 

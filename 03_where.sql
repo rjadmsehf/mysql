@@ -31,7 +31,7 @@ select
 from
 	tbl_menu
 where
-			-- (!= , <>) 부정 연산자 
+			-- (!= , >.<) 부정 연산자 
 	orderable_status != 'Y';
     
 -- tbl_menu 에서 메뉴 코드, 이름, 가격을 조회할건데, 가격이 20000 초과인 녀석들만 조회해줘    
@@ -84,7 +84,7 @@ from
 where
 	orderable_status = 'Y'
     or
-    category_code = 10   -- Y 이거나 코드가 10 인놈들 불러오기 
+    category_code = 12   -- Y 이거나 코드가 12 인놈들 불러오기 
 order by
 	category_code;
     
@@ -104,7 +104,7 @@ where
 -- and 연산자와 함께 where 절 사용   
  
 select 1 and 1;
-select 1 and 0, 0 and 1, 0 and 0;
+select 1 and 0, 1 and 0, 0 and 0;
 
 -- tbl_menu 테이블에서 모든 컬럼을 조회하는데,
 -- 판매상태가 y 이면서 카테고리코드가 10 인 녀석들만 조회해줘
@@ -131,7 +131,7 @@ where
     and 
     menu_code > 10;
     
--- between 연산자랑 where
+-- between 연산자랑 where 10000~ 20000 사이
 select	
 	menu_name,
     menu_price,
@@ -141,7 +141,7 @@ from
 where
 	menu_price between 10000 and 20000;
     
--- 부정 between 
+-- 부정 between  
 select	
 	menu_name,
     menu_price,

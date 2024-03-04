@@ -19,18 +19,19 @@ select
 from tbl_menu;    
 
 -- tbl_menu 테이블에서 모든 컬럼을 조회해줘
+
 select
 	menu_code,
     menu_name,
     menu_price,
     category_code,
-    orderble_status
-from tbl_menu;    
+    orderable_status
+from tbl_menu;  
 
 -- * 사용 방법
 select
 	*
-from tbl_meun;    
+from tbl_menu;    
 
 -- mysql 도 내장함수가 있다.
 

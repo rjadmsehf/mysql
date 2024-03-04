@@ -2,7 +2,9 @@
 -- group by 절은 결과 집합을 특정 열의 값에 따라 그룹화 하는데 사용된다.
 
 select
-	category_code
+	
+    
+	*
 from	
 	tbl_menu;
 select
@@ -67,15 +69,15 @@ group by
     category_code
 with rollup;    
     
-select
-	category_code,
-    menu_price
-from
-	tbl_menu
-where
-	category_code =
-    and 
-    menu_price = 5000;
+-- select
+-- 	category_code,
+--     menu_price
+-- from
+-- 	tbl_menu
+-- where
+-- 	category_code =
+--     and 
+--     menu_price = 5000;
     
     
     

@@ -41,11 +41,13 @@ from
 -- join
 
 select
-   a.menu_name,
+    a.menu_name,
     b.category_name
 from
    tbl_menu a
-join tbl_category b on a.category_code = b.category_code;
+ join tbl_category b
+ 
+ on a.category_code = b.category_code;
 
 -- using 을 활용한 join --------------------------------------------------------------------------------------------------------------------------------
 -- 컬럼명이 같을 경우 using 으로 서로 연관있는 컬럼에 대한 조건을 작성하여
@@ -76,6 +78,7 @@ left join tbl_menu b on a.category_code = b.category_code;
 select
    a.menu_name,
    b.category_name
+   
 from
    tbl_menu a
 right join tbl_category b on a.category_code = b.category_code;
@@ -99,11 +102,35 @@ from
    tbl_category;
 
 select
-   a.category_name,
-    b.category_name
+   category_code,
+   category_name,
+	ref_category_code
 from
+   tbl_category;
+-- join tbl_category b on a.ref_category_code = b.category_code;
+
+
+select
+   *
+from
+   tbl_category;
+
+select
+   a.category_name,
+   b.category_name
+from 
    tbl_category a
 join tbl_category b on a.ref_category_code = b.category_code;
+
+
+
+
+
+
+
+
+
+
 
 
 select

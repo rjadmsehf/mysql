@@ -98,4 +98,7 @@ select
 from	
 	menucate;
 
-    
+select    -- 이친구는 쿼리안에서만 사용가능하다
+	*
+from	
+	menucate;    

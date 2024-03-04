@@ -59,6 +59,7 @@ join
     menu_name,
     menu_price,
     category_code,
+    
     orderable_status
 	from 
 	tbl_menu 
