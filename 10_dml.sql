@@ -18,10 +18,10 @@ describe tbl_menu;
 -- null 허용 가능한(nullable) 컬럼이나 auto increment 가 있는 컬럼은 null 을 부여할 수 있당.
 
 insert into tbl_menu(menu_name, menu_price, category_code , orderable_status)
-values ('초콜릿죽', 6500, 7, 'Y');  -- 굳이 nall 을 표기하지 않아도 자동으로 코드를 부여받는당 
+values ('초콜릿죽', 6500, 7, 'Y');  -- 굳이 null 을 표기하지 않아도 자동으로 코드를 부여받는당 
 
 -- multi insert
-insert into 
+insert 
 	tbl_menu
 values     
     (null, '참치맛아이스크림' , 1700 , 12 , 'Y'), 
@@ -66,7 +66,7 @@ select * from tbl_menu;
 
 delete from tbl_menu 
 order by menu_price
-limit 3;
+limit 5 ;
 
 -- 테이블 행 전체 삭제
 delete from tbl_menu;
@@ -86,8 +86,8 @@ select * from tbl_menu;
 -- insert into tbl_menu values(1,'열무침지아메리카노', 5000, 8 , 'Y');
 
 -- into 는 생략이 가능하다.
-replace into tbl_menu values(1,'열무침지아메리카노' , 5000 , 8 , 'Y');
-replace  tbl_menu values(1,'열무침지아메리카노' , 5000 , 8 , 'Y');
+replace into tbl_menu values(1,'열무김치아메리카노' , 5000 , 8 , 'Y');
+replace  tbl_menu values(1,'열무김치아메리카노' , 5000 , 8 , 'Y');
 
 select * from tbl_menu;
 

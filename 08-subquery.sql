@@ -32,7 +32,8 @@ select * from tbl_menu;
 -- max() : 최댓값을 반환해줌.
 
 select  max(count)  
-from  (select count(*) 
+from  
+(select count(*) 
 as 'count' 
 from tbl_menu 
 group by category_code) 
@@ -102,3 +103,5 @@ select    -- 이친구는 쿼리안에서만 사용가능하다
 	*
 from	
 	menucate;    
+    
+    

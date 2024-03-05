@@ -21,6 +21,7 @@ select* from tbl_menu where menu_price < 9000;
 -- 1 , A
 select* from tbl_menu where category_code = 10
 
+
 union all
 
 -- 2 , B
@@ -59,7 +60,6 @@ join
     menu_name,
     menu_price,
     category_code,
-    
     orderable_status
 	from 
 	tbl_menu 

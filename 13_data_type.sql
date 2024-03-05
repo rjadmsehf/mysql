@@ -16,7 +16,7 @@ select avg(menu_price) from tbl_menu;
 select cast( avg(menu_price) as signed integer ) from tbl_menu;
 select convert ( avg(menu_price), signed integer) from tbl_menu;
 
-select cast('2024$3$4' as date);
+select cast('2024$3$4' as signed integer);
 select cast('2024/3/4' as date);
 select cast('2024%3%4' as date);
 
