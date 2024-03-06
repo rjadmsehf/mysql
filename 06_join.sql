@@ -122,7 +122,9 @@ from
    tbl_category a
 join tbl_category b on a.ref_category_code = b.category_code;
 
-
+select
+	*
+from tbl_category;    
 
 
 
